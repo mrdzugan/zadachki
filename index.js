@@ -74,10 +74,10 @@ document.write("<br \/> #5 ====== <br \/>");
 
 let n = Number(prompt('Input your number'));
 
-let fact = n;
+let fact = 1;
 
-while (n-- > 0) {
-    fact *= n;
+while (n--) {
+    fact *= n + 1;
 }
 
 document.write(fact);
