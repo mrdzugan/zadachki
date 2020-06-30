@@ -2,82 +2,84 @@
 
 // ============= WHILE
 
+task2();
 
 // #1
 
-document.write("<br \/> #1 ====== <br \/>");
+function task1() {
+    let count = Number(prompt('Input your count'));
 
-let count = Number(prompt('Input your count'));
-
-while (count-- > 0) {
-    document.write('#');
+    while (count-- > 0) {
+        document.write('#');
+    }
 }
 
 // #2
 
-document.write("<br \/> #2 ====== <br \/>");
+function task2() {
+    let value = Number(prompt('Input your value'));
 
-let value = Number(prompt('Input your value'));
-
-document.write(value);
-
-if (value < 0) {
-    while (value++ < 0) {
-        document.write(value);
-    }
-} else {
-    while (value-- > 0) {
-        document.write(value);
+    if (value < 0) {
+        value--;
+        while (value++ < 0) {
+            document.write(`${value} `);
+        }
+    } else {
+        value++;
+        while (value-- > 0) {
+            document.write(`${value} `);
+        }
     }
 }
 
 // #3
 
-document.write("<br \/> #3 ====== <br \/>");
+function task3() {
+    let val = Number(prompt('Input your number'));
 
-let val = Number(prompt('Input your number'));
+    let power = Number(prompt('Input your power'));
 
-let power = Number(prompt('Input your power'));
+    let result = 1;
 
-let result = 1;
+    let tmp_power = Math.abs(power);
 
-let tmp_power = Math.abs(power);
+    while (tmp_power-- > 0) {
+        result *= val;
+    }
 
-while (tmp_power-- > 0) {
-    result *= val;
+    power > 0 ? document.write(result) : document.write(1 / result);
 }
-
-power > 0 ? document.write(result) : document.write(1 / result);
 
 // #4
 
-document.write("<br \/> #4 ====== <br \/>");
+function task4() {
+    let val1 = Number(prompt('Input first number'));
 
-let val1 = Number(prompt('Input first number'));
+    let val2 = Number(prompt('Input second number'));
 
-let val2 = Number(prompt('Input second number'));
+    let divider = val1 < val2 ? val1 : val2;
 
-let divider = val1 < val2 ? val1 : val2;
+    divider++;
 
-divider++;
-
-while (divider-- > 0) {
-    if (val1 % divider === 0 && val2 % divider === 0) {
-        document.write(divider);
+    while (divider-- > 0) {
+        if (val1 % divider === 0 && val2 % divider === 0) {
+            document.write(divider);
+        }
     }
 }
 
-
 // #5
 
-document.write("<br \/> #5 ====== <br \/>");
+function task5() {
+    let n = Number(prompt('Input your number'));
 
-let n = Number(prompt('Input your number'));
+    let fact = 1;
 
-let fact = 1;
+    while (n--) {
+        fact *= n + 1;
+    }
 
-while (n--) {
-    fact *= n + 1;
+    document.write(fact);
 }
 
-document.write(fact);
+
