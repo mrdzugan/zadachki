@@ -1,8 +1,8 @@
 'use strict';
 
-// ============= WHILE
+task1(); // to check: task{number_of_task}();
 
-task2();
+// ============= WHILE
 
 // #1
 
@@ -82,4 +82,36 @@ function task5() {
     document.write(fact);
 }
 
+// ============= DO WHILE
 
+// #6
+
+function task6() {
+    let value;
+    do {
+        value = Number(prompt('2 + 2 * 2 = '));
+    } while (value !== 2 + 2 * 2);
+}
+
+// #7
+
+function task7() {
+    let count = 0, val = 1000;
+    const divider = 2;
+    do {
+        count++;
+        val /= divider;
+    } while (val >= 50);
+    document.write(`value = ${val}, count = ${count}`);
+}
+
+// ============= FOR
+
+function task8() {
+    const value = Number(prompt('Input your value'));
+    for (let i = 1; i <= 100; ++i) {
+        if (i % value === 0) {
+            document.write(`${i} `);
+        }
+    }
+}
